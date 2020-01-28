@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ExtJS WS</title>
+    <link rel="stylesheet" type="text/css" href="ext-6.2.0/build/packages/font-ext/resources/font-ext-all.css">
+    <script type="text/javascript" src="ext-6.2.0/build/ext-all.js"></script>
+<!--    <script type="text/javascript" src="Classes/MyExtJS.js"></script>-->
+<!--    <script type="text/javascript" src="Classes/Data.js"></script>-->
+<!--    <script type="text/javascript" src="Classes/app.js"></script>-->
+</head>
+<body>
+    <script>
+        Ext.Loader.setConfig({
+            enable: true,
+            path: {'Classes': 'Classes'}
+        });
+        Ext.require('Classes.Fighter', function () {
+            var fighter = Ext.create('Classes.Fighter', 'Tom', 'Reddle', 20, 10);
+            fighter.getInfo();
+
+            Classes.Person.getInfo();
+
+            var per = Ext.create('Classes.Person', 'Hren', 'Morkovkin');
+            per.getInfo();
+        })
+
+    </script>
+
+
+
+</body>
+</html>
